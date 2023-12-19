@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Send a Love Letter to Steve</h1><br>
+        <p class="description">Steve is very lonely, and would appreciate if you sent him a kind message to brighten his day!</p>
+        <form action="{{ url_for('handle_data') }}" id="form" method="post">
+            <div class="input">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+            </div>
+            <div class="input">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+            </div>
+            <div class="input">
+                <label for="msg">Message:</label><br>
+                <textarea id="msg" name="user_message"></textarea><br>
+            </div>
+            <input type="submit" class="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
