@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank you!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
-    <h1>Steve really appreciates your letter!</h1>
+    <div class="container">
+        <h1 class="title">Steve really appreciates your letter!</h1>
+        <p class="description">Thanks for the kind words! This makes Steve's day a lot better!</p>
+        <img src="/static/images/dancing_bear.gif" alt="dancing bear" class="dance bear">
+        <button id="button" class="redirect button" >Exit Application</button>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("button").onclick = function () {
+            location.href = "https://www.google.com";
+        };
+    </script>
 </body>
 </html>

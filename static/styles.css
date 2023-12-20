@@ -1,5 +1,6 @@
 body {
-    background-color: #3b82f6;
+    background-color: #2563eb;
+    font-family: 'Poppins';
 }
 
 .container {
@@ -7,16 +8,37 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10% 30%;
-    border: 5px solid black;
+    margin: 5% 30%;
+    border: none;
     border-radius: 5%;
 }
 
-.title, .description {
+/* H1 Element Styling */
+.title {
     text-align: center;
-    margin: 1.5% 0 0 0;
+    margin: 2.5% 0 0 0;
+    padding: 0;
 }
 
+.description {
+    text-align: center;
+    margin: 1% 15%;
+    padding: 0;
+}
+
+/* bear image styling */
+.bear {
+    width: 30%;
+    margin-left: 35%;
+    padding: 0;
+}
+
+/* For dancing bear gif */
+.dance {
+    margin: 3% 35%;
+}
+
+/* FORM CSS */
 #form {
     display: flex;
     flex-direction: column;
@@ -25,10 +47,24 @@ body {
 }
 
 .input {
-    padding: 0 2% 2% 2%;
+    padding: 0 2% 2.5% 2%;
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.submit {
-    padding: 2% 5%;
+.button {
+    padding: 2.5% 10%;
+    font-family: 'Poppins';
+    font-size: 18px;
+    border-radius: 15%;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    margin-bottom: 2.5%;
+}
+
+/* redirect button */
+.redirect {
+    margin: 0 15% 3% 15%;
 }

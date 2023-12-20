@@ -6,28 +6,30 @@
     <title>Simple Contact Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Send a Love Letter to Steve</h1><br>
-        <p class="description">Steve is very lonely, and would appreciate if you sent him a kind message to brighten his day!</p>
-        <form action="{{ url_for('handle_data') }}" id="form" method="post">
+        <h1 class="title">Send a Love Letter to Steve <span style="color: red;">&#10084;</span></h1><br>
+        <img src="/static/images/sad_mocha_bear.png" href="sad mocha bear" class="bear">
+        <p class="description">Steve is very lonely right now, and would appreciate if you sent him a kind message to brighten his day!</p>
+        <form action="{{ url_for('handle_data') }}" id="form" onsubmit="return validate()" method="post">
             <div class="input">
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
+                <input type="text" id="name" name="name" min="2" size="30" required><br>
             </div>
             <div class="input">
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
+                <input type="email" id="email" name="email" size="30" required><br>
             </div>
             <div class="input">
                 <label for="msg">Message:</label><br>
-                <textarea id="msg" name="user_message"></textarea><br>
+                <textarea id="msg" name="user_message" rows="5" cols="50"></textarea><br>
             </div>
-            <input type="submit" class="submit" value="Submit">
+            <button id="submit" class="button">Submit</button>
         </form>
     </div>
+    <script src="/static/script.js" type="text/javascript"></script>
 </body>
 </html>
